@@ -77,6 +77,7 @@
           openmarket: 'Open market',
           opentrader: 'Open mobile trader',
           forum: 'Open town forum',
+          openAngus: 'Open Angus Mc Guffin',
           newsets: 'New sets are added to the script',
           chooseItems: 'Choose the items',
           remindHover: 'You get a notification when an item can be used again. Here you can choose these items.',
@@ -4502,8 +4503,9 @@
           selectbox.addItem(10, TWXlang.opentrader, TWXlang.opentrader);
           selectbox.addItem(11, TWXlang.openmarket, TWXlang.openmarket);
           selectbox.addItem(12, TWXlang.forum, TWXlang.forum);
+          selectbox.addItem(13, TWXlang.openAngus, TWXlang.openAngus);
           if (EvName) {
-            selectbox.addItem(13, '<div style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"><b>' + sendGift.label + '</b></div>', sendGift.label);
+            selectbox.addItem(14, '<div style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"><b>' + sendGift.label + '</b></div>', sendGift.label);
           }
           selectbox.addListener(function (e) {
             switch (e) {
@@ -4557,6 +4559,10 @@
               ForumWindow.open();
               break;
             case 13:
+              GameMap.center(8254, 1154);
+              QuestEmployerWindow.showEmployer('macguffin', '8254', '1154');
+              break;
+            case 14:
               TWX.GUI.open('openSender');
               break;
             }
